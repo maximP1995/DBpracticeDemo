@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#959595"
+            android:orientation="horizontal"
+            android:layout_width="350dp"
+            android:layout_height="40dp">
+            <TextView
+                android:minWidth="60dp"
+                android:maxWidth="60dp"
+                android:id="@+id/tv_id"
+                android:background="#dcdcdc"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="ID"
+                android:textColor="#959595"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:minWidth="60dp"
+                android:maxWidth="60dp"
+                android:id="@+id/tv_name"
+                android:layout_marginLeft="1dp"
+                android:background="#dcdcdc"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="姓名"
+                android:textColor="#959595"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_age"
+                android:minWidth="60dp"
+                android:maxWidth="60dp"
+                android:layout_marginLeft="1dp"
+                android:background="#dcdcdc"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="年龄"
+                android:textColor="#959595"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_job"
+                android:minWidth="60dp"
+                android:maxWidth="60dp"
+                android:layout_marginLeft="1dp"
+                android:background="#dcdcdc"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="职业"
+                android:textColor="#959595"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+
+                android:id="@+id/tv_phone"
+                android:layout_marginLeft="1dp"
+                android:background="#dcdcdc"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="电话号码"
+                android:textColor="#959595"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="right|center"
+        android:paddingLeft="50dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:text="增加 "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="right|center"
+        android:paddingLeft="50dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        android:text="查询 "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
