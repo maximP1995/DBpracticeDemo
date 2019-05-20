@@ -37,12 +37,12 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <EditText
-            android:inputType="numberDecimal"
-            android:hint="ID"
-            android:id="@+id/et_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--<EditText-->
+            <!--android:inputType="numberDecimal"-->
+            <!--android:hint="ID"-->
+            <!--android:id="@+id/et_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
         <EditText
             android:id="@+id/et_name"
             android:hint="姓名"
@@ -54,11 +54,11 @@
             android:hint="年龄"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/et_job"
-            android:hint="职业"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--<EditText-->
+            <!--android:id="@+id/et_job"-->
+            <!--android:hint="职业"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
         <EditText
             android:inputType="phone"
             android:id="@+id/et_phone"

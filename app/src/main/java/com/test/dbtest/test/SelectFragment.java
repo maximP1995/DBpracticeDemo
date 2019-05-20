@@ -27,10 +27,10 @@ public class SelectFragment extends DialogFragment implements View.OnClickListen
     private TextView tv_delete;
     private TextView tv_update;
     private TextView tv_confirm;
-    private EditText et_id;
+//    private EditText et_id;
     private EditText et_name;
     private EditText et_age;
-    private EditText et_job;
+//    private EditText et_job;
     private EditText et_phone;
     private LinearLayout ll_update;
     public static SelectFragment newInstance(long id) {
@@ -65,10 +65,10 @@ public class SelectFragment extends DialogFragment implements View.OnClickListen
         if (bundle!=null){
             id = bundle.getLong(ID_KEY);
         }
-        et_id = view.findViewById(R.id.et_id);
+//        et_id = view.findViewById(R.id.et_id);
         et_name = view.findViewById(R.id.et_name);
         et_age = view.findViewById(R.id.et_age);
-        et_job = view.findViewById(R.id.et_job);
+//        et_job = view.findViewById(R.id.et_job);
         et_phone = view.findViewById(R.id.et_phone);
         tv_delete = view.findViewById(R.id.tv_delete);
         tv_delete.setOnClickListener(this);
@@ -95,9 +95,8 @@ public class SelectFragment extends DialogFragment implements View.OnClickListen
                 Database ss = new Database(getActivity());
                 Cursor cursor = ss.getDatabase().query(ss.getTableName(),null,"id = ?",new String[]{String.valueOf(id)},null,null,null);
                 if (cursor.moveToNext()){
-                    et_id.setText(String.valueOf(cursor.getLong(cursor.getColumnIndex(Database.Id))));
+//                    et_id.setText(String.valueOf(cursor.getLong(cursor.getColumnIndex(Database.Id))));
                     et_age.setText(String.valueOf(cursor.getInt(cursor.getColumnIndex(Database.Age))));
-                    et_job.setText(cursor.getString(cursor.getColumnIndex(Database.Job)));
                     et_name.setText(cursor.getString(cursor.getColumnIndex(Database.Name)));
                     et_phone.setText(cursor.getString(cursor.getColumnIndex(Database.Phone)));
                 }
@@ -105,13 +104,13 @@ public class SelectFragment extends DialogFragment implements View.OnClickListen
             case R.id.tv_confirm:
                 Database database1 = new Database(getActivity());
                 InfoEntity entity = new InfoEntity();
-                if (TextUtils.isEmpty(et_id.getText())||TextUtils.isEmpty(et_phone.getText())||TextUtils.isEmpty(et_job.getText())||TextUtils.isEmpty(et_name.getText())||TextUtils.isEmpty(et_age.getText())){
+                if (TextUtils.isEmpty(et_phone.getText())||TextUtils.isEmpty(et_name.getText())||TextUtils.isEmpty(et_age.getText())){
                     return;
                 }
                 entity.phone = et_phone.getText().toString();
-                entity.job = et_job.getText().toString();
+//                entity.job = et_job.getText().toString();
                 entity.name = et_name.getText().toString();
-                entity.id = Long.parseLong(et_id.getText().toString());
+//                entity.id = Long.parseLong(et_id.getText().toString());
                 entity.age = Integer.parseInt(et_age.getText().toString());
                 database1.update(id,entity);
                 HomeActivity activity1 = (HomeActivity) getActivity();

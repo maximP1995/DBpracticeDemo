@@ -20,7 +20,6 @@ public class Database {
     public static final String Id = "id";
     public static final String Name = "name";
     public static final String Phone = "tel_no";
-    public static final String Job = "job";
     public static final String Age = "age";
     private SQLiteDbHelper dbHelper;
     public Database(Context context){
@@ -34,10 +33,8 @@ public class Database {
     }
     public boolean insertData(InfoEntity entity){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Id,entity.id);
         contentValues.put(Name,entity.name);
         contentValues.put(Age,entity.age);
-        contentValues.put(Job,entity.job);
         contentValues.put(Phone,entity.phone);
         try {
             getDatabase().insert(getTableName(),null,contentValues);
@@ -57,7 +54,6 @@ public class Database {
             entity.id = cursor.getLong(cursor.getColumnIndex(Id));
             entity.name = cursor.getString(cursor.getColumnIndex(Name));
             entity.age = cursor.getInt(cursor.getColumnIndex(Age));
-            entity.job = cursor.getString(cursor.getColumnIndex(Job));
             entity.phone = cursor.getString(cursor.getColumnIndex(Phone));
             result.add(entity);
         }
@@ -66,10 +62,8 @@ public class Database {
     }
     public void update(long id,@NonNull InfoEntity entity){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Id,entity.id);
         contentValues.put(Name,entity.name);
         contentValues.put(Age,entity.age);
-        contentValues.put(Job,entity.job);
         contentValues.put(Phone,entity.phone);
         getDatabase().update(getTableName(),contentValues,"id = ?",new String[]{String.valueOf(id)});
     }
@@ -81,10 +75,9 @@ public class Database {
         public static final String DB_NAME = "testdb.db";
         public static final int DB_VERSION = 1;
         public static final String TABLE_NAME = "testTable";
-        public static final String CREATE_TABLE = "create table "+TABLE_NAME+" ( id long primary key  ," +
+        public static final String CREATE_TABLE = "create table "+TABLE_NAME+" ( id integer primary key autoincrement," +
                 "name varchar(20) not null," +
                 "tel_no varchar(11) not null," +
-                "job varchar(20) not null," +
                 "age interger default 0" +
                 ");";
         public SQLiteDbHelper(Context context){

@@ -37,7 +37,7 @@ public class SearchFragment extends DialogFragment implements View.OnClickListen
     private HomeListAdapter adapter;
     private Spinner spinner;
     private LinearLayout ll_result;
-    private String[] keys = new String[]{Database.Id,Database.Name,Database.Age,Database.Phone,Database.Job};
+    private String[] keys = new String[]{Database.Id,Database.Name,Database.Age,Database.Phone};
     private String key;
     public static SearchFragment newInstance() {
 
@@ -77,7 +77,7 @@ public class SearchFragment extends DialogFragment implements View.OnClickListen
         tv_search = view.findViewById(R.id.tv_search);
         tv_search.setOnClickListener(this);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.item_spinner,new String[]{"ID","姓名","年龄","电话号码","职业"});
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.item_spinner,new String[]{"ID","姓名","年龄","电话号码"});
 
         adapter.setDropDownViewResource(R.layout.item_spinner);
         spinner.setAdapter(adapter);

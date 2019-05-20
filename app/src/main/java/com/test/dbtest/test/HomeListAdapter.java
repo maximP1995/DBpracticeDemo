@@ -36,7 +36,7 @@ public class HomeListAdapter extends RecyclerView.Adapter {
         viewHolder.tv_id.setText(String.valueOf(entity.id));
         viewHolder.tv_name.setText(entity.name);
         viewHolder.tv_age.setText(String.valueOf(entity.age));
-        viewHolder.tv_job.setText(entity.job);
+//        viewHolder.tv_job.setText(entity.job);
         viewHolder.tv_phone.setText(entity.phone);
         viewHolder.ll_whole.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +61,7 @@ public class HomeListAdapter extends RecyclerView.Adapter {
         private TextView tv_id;
         private TextView tv_name;
         private TextView tv_age;
-        private TextView tv_job;
+//        private TextView tv_job;
         private TextView tv_phone;
         public ViewHolder(View itemView) {
             super(itemView);
@@ -69,7 +69,7 @@ public class HomeListAdapter extends RecyclerView.Adapter {
             tv_id = itemView.findViewById(R.id.tv_id);
             tv_name = itemView.findViewById(R.id.tv_name);
             tv_age = itemView.findViewById(R.id.tv_age);
-            tv_job = itemView.findViewById(R.id.tv_job);
+//            tv_job = itemView.findViewById(R.id.tv_job);
             tv_phone = itemView.findViewById(R.id.tv_phone);
         }
     }

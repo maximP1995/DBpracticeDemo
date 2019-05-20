@@ -3,7 +3,7 @@
     android:id="@+id/ll_whole"
     android:background="#959595"
     android:orientation="horizontal"
-    android:layout_width="350dp"
+    android:layout_width="match_parent"
     android:layout_height="40dp">
     <TextView
         android:minWidth="60dp"
@@ -19,8 +19,8 @@
         android:layout_height="match_parent" />
     <TextView
         android:id="@+id/tv_name"
-        android:minWidth="60dp"
-        android:maxWidth="60dp"
+        android:minWidth="100dp"
+        android:maxWidth="100dp"
         android:layout_marginLeft="1dp"
         android:background="#ffffff"
         android:maxLines="1"
@@ -43,19 +43,19 @@
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
-    <TextView
-        android:id="@+id/tv_job"
-        android:minWidth="60dp"
-        android:maxWidth="60dp"
-        android:layout_marginLeft="1dp"
-        android:background="#ffffff"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:text="--"
-        android:textColor="#959595"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+    <!--<TextView-->
+        <!--android:id="@+id/tv_job"-->
+        <!--android:minWidth="60dp"-->
+        <!--android:maxWidth="60dp"-->
+        <!--android:layout_marginLeft="1dp"-->
+        <!--android:background="#ffffff"-->
+        <!--android:maxLines="1"-->
+        <!--android:ellipsize="end"-->
+        <!--android:text="&#45;&#45;"-->
+        <!--android:textColor="#959595"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent" />-->
     <TextView
         android:id="@+id/tv_phone"
         android:layout_marginLeft="1dp"
@@ -65,6 +65,7 @@
         android:text="--"
         android:textColor="#959595"
         android:gravity="center"
-        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="match_parent" />
 </LinearLayout>

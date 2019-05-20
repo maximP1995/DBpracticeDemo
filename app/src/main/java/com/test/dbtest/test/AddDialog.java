@@ -21,10 +21,10 @@ import com.test.dbtest.R;
  */
 
 public class AddDialog extends DialogFragment implements View.OnClickListener{
-    private EditText et_id;
+//    private EditText et_id;
     private EditText et_name;
     private EditText et_age;
-    private EditText et_job;
+//    private EditText et_job;
     private EditText et_phone;
     private TextView tv_confirm;
     private Database database;
@@ -51,10 +51,10 @@ public class AddDialog extends DialogFragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_ad,container,false);
-        et_id = view.findViewById(R.id.et_id);
+//        et_id = view.findViewById(R.id.et_id);
         et_name = view.findViewById(R.id.et_name);
         et_age = view.findViewById(R.id.et_age);
-        et_job = view.findViewById(R.id.et_job);
+//        et_job = view.findViewById(R.id.et_job);
         et_phone = view.findViewById(R.id.et_phone);
         tv_confirm = view.findViewById(R.id.tv_confirm);
         tv_confirm.setOnClickListener(this);
@@ -66,14 +66,14 @@ public class AddDialog extends DialogFragment implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.tv_confirm:
-                if (TextUtils.isEmpty(et_id.getText())||TextUtils.isEmpty(et_phone.getText())||TextUtils.isEmpty(et_job.getText())||TextUtils.isEmpty(et_name.getText())||TextUtils.isEmpty(et_age.getText())){
+                if (TextUtils.isEmpty(et_phone.getText())||TextUtils.isEmpty(et_name.getText())||TextUtils.isEmpty(et_age.getText())){
                     return;
                 }
                 InfoEntity entity = new InfoEntity();
                 entity.phone = et_phone.getText().toString();
-                entity.job = et_job.getText().toString();
+//                entity.job = et_job.getText().toString();
                 entity.name = et_name.getText().toString();
-                entity.id = Long.parseLong(et_id.getText().toString());
+//                entity.id = Long.parseLong(et_id.getText().toString());
                 entity.age = Integer.parseInt(et_age.getText().toString());
                 if (database.insertData(entity)){
                     HomeActivity activity = (HomeActivity) getActivity();
